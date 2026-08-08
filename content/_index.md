@@ -338,6 +338,19 @@ Login feito, entao:
     # DOCA
     sudo pacman -Sy --noconfirm --needed plank
 
+    # DE
+    # 1. Remove todas as dependências órfãs do sistema
+    sudo pacman -Rns $(pacman -Qtdq)
+    
+    # 2. Limpa o cache do pacman mantendo apenas os pacotes instalados
+    sudo pacman -Sc
+
+    sudo pacman -Syu --needed --noconfirm plasma-meta kde-applications
+    sudo pacman -Syu --needed --noconfirm gnome gnome-extra
+    sudo pacman -Syu --needed --noconfirm cinnamon nemo-fileroller
+    sudo pacman -Syu --needed --noconfirm xfce4 xfce4-goodies
+    sudo pacman -Syu --needed --noconfirm mate mate-extra
+
     # SYS INFO
     sudo pacman -Sy --noconfirm --needed fastfetch
 
