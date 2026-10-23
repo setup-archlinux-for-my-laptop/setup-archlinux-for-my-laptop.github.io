@@ -88,86 +88,45 @@ sudo systemctl enable sddm    # Pra KDE, LXQt, Cinnamon, Deepin, Budgie, i3, Swa
 #sudo pacman -Sy --noconfirm --needed lxappearance-obconf
 #sudo pacman -Sy --noconfirm --needed obconf-qt
 
-# TEMAS
-sudo pacman -Sy --noconfirm --needed breeze
-sudo pacman -Sy --noconfirm --needed breeze-gtk   
-sudo pacman -Sy --noconfirm --needed kvantum-qt5
-sudo pacman -Sy --noconfirm --needed papirus-icon-theme
-sudo pacman -Sy --noconfirm --needed plasma-workspace-wallpapers
-sudo pacman -Sy --noconfirm --needed elementary-wallpapers
-sudo pacman -Sy --noconfirm --needed deepin-wallpapers
-sudo pacman -Sy --noconfirm --needed cosmic-wallpapers
-sudo pacman -Sy --noconfirm --needed archlinux-wallpapers
-sudo pacman -Sy --noconfirm --needed ttf-atkinson-hyperlegible
-sudo pacman -Sy --noconfirm --needed sound-theme-freedesktop
-sudo pacman -Sy --noconfirm --needed pop-icon-theme 
-sudo pacman -Sy --noconfirm --needed papirus-icon-theme
-sudo pacman -Sy --noconfirm --needed oxygen-sounds
-sudo pacman -Sy --noconfirm --needed oxygen-icons
-sudo pacman -Sy --noconfirm --needed orchis-theme
-sudo pacman -Sy --noconfirm --needed ocean-sound-theme
-sudo pacman -Sy --noconfirm --needed obsidian-icon-theme
-sudo pacman -Sy --noconfirm --needed materia-gtk-theme
-sudo pacman -Sy --noconfirm --needed mate-icon-theme
-sudo pacman -Sy --noconfirm --needed lxqt-themes
-sudo pacman -Sy --noconfirm --needed lxde-icon-theme
-sudo pacman -Sy --noconfirm --needed gtk-theme-elementary
-sudo pacman -Sy --noconfirm --needed elementary-icon-theme
-sudo pacman -Sy --noconfirm --needed sound-theme-elementary
-sudo pacman -Sy --noconfirm --needed deepin-sound-theme 
-sudo pacman -Sy --noconfirm --needed deepin-icon-theme
-sudo pacman -Sy --noconfirm --needed deepin-gtk-theme
-sudo pacman -Sy --noconfirm --needed cosmic-sound-theme
-sudo pacman -Sy --noconfirm --needed cosmic-icon-theme
-sudo pacman -Sy --noconfirm --needed breeze-icons
-sudo pacman -Sy --noconfirm --needed breeze-gtk
-sudo pacman -Sy --noconfirm --needed adwaita-icon-theme
-sudo pacman -Sy --noconfirm --needed adw-gtk-theme
-sudo pacman -Sy --noconfirm --needed adapta-gtk-theme
-sudo pacman -Sy --noconfirm --needed adw-gtk-theme
-sudo pacman -Sy --noconfirm --needed deepin-gtk-theme
-sudo pacman -Sy --noconfirm --needed gtk-theme-elementary
-sudo pacman -Sy --noconfirm --needed materia-gtk-theme
-sudo pacman -Sy --noconfirm --needed pop-gtk-theme
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-all
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-black
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-blue
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-brown
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-dracula
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-green
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-grey
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-manjaro
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-nord
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-orange
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-pink
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-purple
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-red
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-standard
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-ubuntu
-sudo pacman -Sy --noconfirm --needed tela-circle-icon-theme-yellow
+# Temas GTK / Qt e Engines de Estilo
+sudo pacman -Syu --needed --noconfirm \
+    breeze breeze-gtk kvantum kvantum-qt5 orchis-theme materia-gtk-theme \
+    adapta-gtk-theme adw-gtk-theme pop-gtk-theme deepin-gtk-theme \
+    gtk-theme-elementary arc-gtk-theme numix-gtk-theme catppuccin-gtk-theme-mocha
 
-# FONTES
-sudo pacman -Sy --noconfirm --needed noto-fonts-extra
-sudo pacman -Sy --noconfirm --needed opendesktop-fonts
-sudo pacman -Sy --noconfirm --needed otf-atkinson-hyperlegible
-sudo pacman -Sy --noconfirm --needed otf-atkinsonhyperlegiblemono-nerd
-sudo pacman -Sy --noconfirm --needed ttf-fira-code
-sudo pacman -Sy --noconfirm --needed ttf-fira-mono
-sudo pacman -Sy --noconfirm --needed ttf-fira-sans
-sudo pacman -Sy --noconfirm --needed ttf-firacode-nerd
-sudo pacman -Sy --noconfirm --needed ttf-jetbrains-mono
-sudo pacman -Sy --noconfirm --needed ttf-jetbrains-mono-nerd
-sudo pacman -Sy --noconfirm --needed ttf-nerd-fonts-symbols
-sudo pacman -Sy --noconfirm --needed ttf-nerd-fonts-symbols-common
-sudo pacman -Sy --noconfirm --needed ttf-nerd-fonts-symbols-mono
-sudo pacman -Sy --noconfirm --needed ttf-roboto
-sudo pacman -Sy --noconfirm --needed ttf-roboto-mono
-sudo pacman -Sy --noconfirm --needed ttf-roboto-mono-nerd
-sudo pacman -Sy --noconfirm --needed ttf-space-mono-nerd
-sudo pacman -Sy --noconfirm --needed ttf-ubuntu-font-family
-sudo pacman -Sy --noconfirm --needed ttf-ubuntu-nerd
-sudo pacman -Sy --noconfirm --needed ttf-victor-mono-nerd
-sudo pacman -Sy --noconfirm --needed ttf-zed-mono-nerd
+# Pacotes de Ícones e Cursores
+sudo pacman -Syu --needed --noconfirm \
+    papirus-icon-theme pop-icon-theme oxygen-icons obsidian-icon-theme \
+    mate-icon-theme lxde-icon-theme elementary-icon-theme deepin-icon-theme \
+    cosmic-icon-theme breeze-icons adwaita-icon-theme arc-icon-theme \
+    numix-icon-theme xcursor-breeze xcursor-numix
+
+# Variantes de Ícones Tela Circle (Pacote Principal e Variações)
+sudo pacman -Syu --needed --noconfirm \
+    tela-circle-icon-theme-all tela-circle-icon-theme-black tela-circle-icon-theme-blue \
+    tela-circle-icon-theme-brown tela-circle-icon-theme-dracula tela-circle-icon-theme-green \
+    tela-circle-icon-theme-grey tela-circle-icon-theme-manjaro tela-circle-icon-theme-nord \
+    tela-circle-icon-theme-orange tela-circle-icon-theme-pink tela-circle-icon-theme-purple \
+    tela-circle-icon-theme-red tela-circle-icon-theme-standard tela-circle-icon-theme-ubuntu \
+    tela-circle-icon-theme-yellow
+
+# Pacotes de Wallpapers e Sons de Sistema
+sudo pacman -Syu --needed --noconfirm \
+    plasma-workspace-wallpapers elementary-wallpapers deepin-wallpapers \
+    cosmic-wallpapers archlinux-wallpapers sound-theme-freedesktop \
+    oxygen-sounds ocean-sound-theme sound-theme-elementary \
+    deepin-sound-theme cosmic-sound-theme
+
+# Tipografia, Fontes Monospaced, Sans-Serif e Nerd Fonts
+sudo pacman -Syu --needed --noconfirm \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+    opendesktop-fonts ttf-atkinson-hyperlegible otf-atkinson-hyperlegible \
+    ttf-fira-code ttf-fira-mono ttf-fira-sans ttf-firacode-nerd \
+    ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols \
+    ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono \
+    ttf-roboto ttf-roboto-mono ttf-roboto-mono-nerd ttf-space-mono-nerd \
+    ttf-ubuntu-font-family ttf-ubuntu-nerd ttf-victor-mono-nerd \
+    ttf-zed-mono-nerd ttf-dejavu ttf-liberation ttf-cascadia-code-nerd
 
 # DOCA
 sudo pacman -Sy --noconfirm --needed plank
