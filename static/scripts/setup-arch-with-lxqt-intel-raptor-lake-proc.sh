@@ -5,12 +5,26 @@ sudo reflector --country Brazil --latest 5 --sort rate --save /etc/pacman.d/mirr
 sudo pacman -Syy
 sudo reflector --country Brazil --latest 5 --sort rate
 
-# LXQT
-sudo pacman -Sy --noconfirm --needed lxqt lxqt-archiver
-sudo pacman -Sy --noconfirm --needed xsettingsd
-
-# OPENBOX
-sudo pacman -Sy --noconfirm --needed openbox
+# DRIVERS
+sudo pacman -Sy --noconfirm --needed intel-media-driver
+sudo pacman -Sy --noconfirm --needed libva-intel-driver
+sudo pacman -Sy --noconfirm --needed libva-utils
+sudo pacman -Sy --noconfirm --needed mesa
+sudo pacman -Sy --noconfirm --needed vulkan-intel
+sudo pacman -Sy --noconfirm --needed vulkan-tools
+sudo pacman -Sy --noconfirm --needed ffmpeg
+sudo pacman -Sy --noconfirm --needed vulkan-tools
+sudo pacman -Sy --noconfirm --needed vulkan-tools
+sudo pacman -Sy --noconfirm --needed gst-plugins-good 
+sudo pacman -Sy --noconfirm --needed gst-plugins-bad 
+sudo pacman -Sy --noconfirm --needed gst-plugins-ugly 
+sudo pacman -Sy --noconfirm --needed gst-libav
+sudo pacman -Sy --noconfirm --needed thermald 
+sudo pacman -Sy --noconfirm --needed tuned 
+sudo pacman -Sy --noconfirm --needed linux-firmware 
+sudo pacman -Sy --noconfirm --needed intel-ucode 
+sudo pacman -Sy --noconfirm --needed base-devel 
+sudo pacman -Sy --noconfirm --needed dkms
 
 # USB
 sudo pacman -Sy --noconfirm --needed usbutils
@@ -27,6 +41,7 @@ sudo systemctl enable --now udisks2
 
 # MOUSE e TOUCHPAD
 sudo pacman -Sy --noconfirm --needed xf86-libinput libinput
+sudo pacman -Sy --noconfirm --needed xf86-input-libinput
 
 # BLUETHOOT
 sudo pacman -Sy --noconfirm --needed blueman bluez bluez-utils
@@ -35,6 +50,9 @@ sudo systemctl enable --now bluetooth
 # AUDIO
 sudo pacman -Sy --noconfirm --needed sof-firmware alsa-ucm-conf sof-tools
 sudo pacman -Sy --noconfirm --needed pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber alsa-utils
+      
+# MONITORES
+sudo pacman -Sy --noconfirm --needed arandr
 
 # BROWSER e DOWNLOAD
 sudo pacman -Sy --noconfirm --needed falkon
@@ -57,38 +75,18 @@ sudo systemctl enable sddm    # Pra KDE, LXQt, Cinnamon, Deepin, Budgie, i3, Swa
 #sudo systemctl enable gdm --now     # Pra GNOME
 #sudo systemctl enable lightdm --now # Pra XFCE, MATE, Openbox
 
-# DRIVERS
-sudo pacman -Sy --noconfirm --needed intel-media-driver
-sudo pacman -Sy --noconfirm --needed libva-intel-driver
-sudo pacman -Sy --noconfirm --needed libva-utils
-sudo pacman -Sy --noconfirm --needed mesa
-sudo pacman -Sy --noconfirm --needed vulkan-intel
-sudo pacman -Sy --noconfirm --needed vulkan-tools
-sudo pacman -Sy --noconfirm --needed ffmpeg
-sudo pacman -Sy --noconfirm --needed vulkan-tools
-sudo pacman -Sy --noconfirm --needed vulkan-tools
-sudo pacman -Sy --noconfirm --needed gst-plugins-good 
-sudo pacman -Sy --noconfirm --needed gst-plugins-bad 
-sudo pacman -Sy --noconfirm --needed gst-plugins-ugly 
-sudo pacman -Sy --noconfirm --needed gst-libav
-sudo pacman -Sy --noconfirm --needed thermald 
-sudo pacman -Sy --noconfirm --needed tuned 
-sudo pacman -Sy --noconfirm --needed linux-firmware 
-sudo pacman -Sy --noconfirm --needed intel-ucode 
-sudo pacman -Sy --noconfirm --needed base-devel 
-sudo pacman -Sy --noconfirm --needed dkms
-  
-# MONITORES
-sudo pacman -Sy --noconfirm --needed arandr
-
 # APARENCIA 
-sudo pacman -Sy --noconfirm --needed qt5ct
-sudo pacman -Sy --noconfirm --needed qt6ct
-sudo pacman -Sy --noconfirm --needed kvantum
-sudo pacman -Sy --noconfirm --needed lxappearance
-sudo pacman -Sy --noconfirm --needed lxappearance-obconf
-sudo pacman -Sy --noconfirm --needed obconf-qt
-
+# LXQT
+#sudo pacman -Sy --noconfirm --needed lxqt lxqt-archiver
+#sudo pacman -Sy --noconfirm --needed xsettingsd
+# OPENBOX
+# sudo pacman -Sy --noconfirm --needed openbox
+#sudo pacman -Sy --noconfirm --needed qt5ct
+#sudo pacman -Sy --noconfirm --needed qt6ct
+#sudo pacman -Sy --noconfirm --needed kvantum
+#sudo pacman -Sy --noconfirm --needed lxappearance
+#sudo pacman -Sy --noconfirm --needed lxappearance-obconf
+#sudo pacman -Sy --noconfirm --needed obconf-qt
 
 # TEMAS
 sudo pacman -Sy --noconfirm --needed breeze
@@ -173,6 +171,44 @@ sudo pacman -Sy --noconfirm --needed ttf-zed-mono-nerd
 
 # DOCA
 sudo pacman -Sy --noconfirm --needed plank
+
+# DE
+sudo pacman -Rns $(pacman -Qtdq)
+sudo pacman -Sc
+
+sudo pacman -Syu --needed --noconfirm plasma-meta kde-applications
+sudo pacman -Syu --needed --noconfirm gnome gnome-extra
+sudo pacman -Syu --needed --noconfirm cinnamon nemo-fileroller
+sudo pacman -Syu --needed --noconfirm xfce4 xfce4-goodies
+sudo pacman -Syu --needed --noconfirm mate mate-extra
+sudo pacman -Syu --needed --noconfirm lxqt
+sudo pacman -Syu --needed --noconfirm lxde
+sudo pacman -Syu --needed --noconfirm budgie-desktop
+sudo pacman -Syu --needed --noconfirm deepin deepin-extra
+sudo pacman -Syu --needed --noconfirm enlightenment
+sudo pacman -Syu --needed --noconfirm sway swaybg waybar foot
+sudo pacman -Syu --needed --noconfirm hyprland waybar kitty
+sudo pacman -Syu --needed --noconfirm river
+sudo pacman -Syu --needed --noconfirm wayfire wf-shell
+sudo pacman -Syu --needed --noconfirm i3-wm i3status dmenu
+sudo pacman -Syu --needed --noconfirm awesome
+sudo pacman -Syu --needed --noconfirm bspwm sxhkd
+sudo pacman -Syu --needed --noconfirm qtile
+sudo pacman -Syu --needed --noconfirm herbstluftwm
+sudo pacman -Syu --needed --noconfirm openbox obconf tint2
+sudo pacman -Syu --needed --noconfirm fluxbox
+sudo pacman -Syu --needed --noconfirm icewm
+sudo pacman -Syu --needed --noconfirm windowmaker
+sudo pacman -Syu --needed --noconfirm pantheon
+sudo pacman -Syu --needed --noconfirm ukui ukui-media
+sudo pacman -Syu --needed --noconfirm cosmic-desktop
+sudo pacman -Syu --needed --noconfirm fvwm3
+sudo pacman -Syu --needed --noconfirm pekwm
+
+# Compositores e Window Managers Especiais para Wayland
+sudo pacman -Syu --needed --noconfirm labwc
+sudo pacman -Syu --needed --noconfirm wayfire wf-shell wf-config
+
 
 # SYS INFO
 sudo pacman -Sy --noconfirm --needed fastfetch
