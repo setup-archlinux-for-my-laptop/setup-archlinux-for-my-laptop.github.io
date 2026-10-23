@@ -176,6 +176,7 @@ sudo pacman -Sy --noconfirm --needed plank
 sudo pacman -Rns $(pacman -Qtdq)
 sudo pacman -Sc
 
+# Ambientes de Desktop Completos
 sudo pacman -Syu --needed --noconfirm plasma-meta kde-applications
 sudo pacman -Syu --needed --noconfirm gnome gnome-extra
 sudo pacman -Syu --needed --noconfirm cinnamon nemo-fileroller
@@ -186,28 +187,33 @@ sudo pacman -Syu --needed --noconfirm lxde
 sudo pacman -Syu --needed --noconfirm budgie-desktop
 sudo pacman -Syu --needed --noconfirm deepin deepin-extra
 sudo pacman -Syu --needed --noconfirm enlightenment
+
+# Wayland Composers e Tiling WMs Modernos
 sudo pacman -Syu --needed --noconfirm sway swaybg waybar foot
 sudo pacman -Syu --needed --noconfirm hyprland waybar kitty
 sudo pacman -Syu --needed --noconfirm river
-sudo pacman -Syu --needed --noconfirm wayfire wf-shell
+sudo pacman -Syu --needed --noconfirm wayfire wf-shell wf-config
+sudo pacman -Syu --needed --noconfirm labwc
+
+# X11 Tiling Window Managers
 sudo pacman -Syu --needed --noconfirm i3-wm i3status dmenu
 sudo pacman -Syu --needed --noconfirm awesome
 sudo pacman -Syu --needed --noconfirm bspwm sxhkd
 sudo pacman -Syu --needed --noconfirm qtile
 sudo pacman -Syu --needed --noconfirm herbstluftwm
+
+# X11 Floating e Minimalist Window Managers
 sudo pacman -Syu --needed --noconfirm openbox obconf tint2
 sudo pacman -Syu --needed --noconfirm fluxbox
 sudo pacman -Syu --needed --noconfirm icewm
 sudo pacman -Syu --needed --noconfirm windowmaker
-sudo pacman -Syu --needed --noconfirm pantheon
-sudo pacman -Syu --needed --noconfirm ukui ukui-media
-sudo pacman -Syu --needed --noconfirm cosmic-desktop
 sudo pacman -Syu --needed --noconfirm fvwm3
 sudo pacman -Syu --needed --noconfirm pekwm
 
-# Compositores e Window Managers Especiais para Wayland
-sudo pacman -Syu --needed --noconfirm labwc
-sudo pacman -Syu --needed --noconfirm wayfire wf-shell wf-config
+# Outras Interfaces e Ecossistemas
+sudo pacman -Syu --needed --noconfirm pantheon
+sudo pacman -Syu --needed --noconfirm ukui ukui-media
+sudo pacman -Syu --needed --noconfirm cosmic-desktop
 
 
 # SYS INFO
