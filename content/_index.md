@@ -200,26 +200,6 @@ Login feito, entao:
     sudo pacman -Sy --noconfirm --needed sof-firmware alsa-ucm-conf sof-tools
     sudo pacman -Sy --noconfirm --needed pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber alsa-utils
     
-    # BROWSER e DOWNLOAD
-    sudo pacman -Sy --noconfirm --needed falkon
-    sudo pacman -Sy --noconfirm --needed uget aria2
-
-    # EREADERS
-    sudo pacman -Sy --noconfirm --needed calibre okular
-
-    # GIT
-    sudo pacman -Sy --noconfirm --needed git
-    
-    # JAVA
-    sudo pacman -Sy --noconfirm --needed jdk21-openjdk
-    
-    # MAVEN
-    sudo pacman -Sy --noconfirm --needed maven
-
-    # LOGIN
-    sudo systemctl enable sddm    # Pra KDE, LXQt, Cinnamon, Deepin, Budgie, i3, Sway
-    #sudo systemctl enable gdm --now     # Pra GNOME
-    #sudo systemctl enable lightdm --now # Pra XFCE, MATE, Openbox
     
     # DRIVERS
     sudo pacman -Sy --noconfirm --needed intel-media-driver
@@ -244,6 +224,28 @@ Login feito, entao:
       
     # MONITORES
     sudo pacman -Sy --noconfirm --needed arandr
+
+
+    # BROWSER e DOWNLOAD
+    sudo pacman -Sy --noconfirm --needed falkon
+    sudo pacman -Sy --noconfirm --needed uget aria2
+
+    # EREADERS
+    sudo pacman -Sy --noconfirm --needed calibre okular
+
+    # GIT
+    sudo pacman -Sy --noconfirm --needed git
+    
+    # JAVA
+    sudo pacman -Sy --noconfirm --needed jdk21-openjdk
+    
+    # MAVEN
+    sudo pacman -Sy --noconfirm --needed maven
+
+    # LOGIN
+    sudo systemctl enable sddm    # Pra KDE, LXQt, Cinnamon, Deepin, Budgie, i3, Sway
+    #sudo systemctl enable gdm --now     # Pra GNOME
+    #sudo systemctl enable lightdm --now # Pra XFCE, MATE, Openbox
 
     # APARENCIA 
     sudo pacman -Sy --noconfirm --needed qt5ct
