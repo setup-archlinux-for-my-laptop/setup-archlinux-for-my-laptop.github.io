@@ -251,20 +251,22 @@ Login feito, entao:
     #sudo pacman -Sy --noconfirm --needed lxappearance-obconf
     #sudo pacman -Sy --noconfirm --needed obconf-qt
 
-    # Temas GTK / Qt e Engines de Estilo
+    # 1. Temas GTK / Qt e Engines de Estilo
     sudo pacman -Syu --needed --noconfirm \
         breeze breeze-gtk kvantum kvantum-qt5 orchis-theme materia-gtk-theme \
         adapta-gtk-theme adw-gtk-theme pop-gtk-theme deepin-gtk-theme \
-        gtk-theme-elementary arc-gtk-theme numix-gtk-theme catppuccin-gtk-theme-mocha
+        gtk-theme-elementary arc-gtk-theme numix-gtk-theme catppuccin-gtk-theme-mocha \
+        nordic-theme gruvbox-dark-gtk-theme fluent-gtk-theme
     
-    # Pacotes de Ícones e Cursores
+    # 2. Pacotes de Ícones e Cursores
     sudo pacman -Syu --needed --noconfirm \
         papirus-icon-theme pop-icon-theme oxygen-icons obsidian-icon-theme \
         mate-icon-theme lxde-icon-theme elementary-icon-theme deepin-icon-theme \
         cosmic-icon-theme breeze-icons adwaita-icon-theme arc-icon-theme \
-        numix-icon-theme xcursor-breeze xcursor-numix
+        numix-icon-theme xcursor-breeze xcursor-numix bibata-cursor-theme \
+        qogir-icon-theme
     
-    # Variantes de Ícones Tela Circle (Pacote Principal e Variações)
+    # 3. Variantes de Ícones Tela Circle
     sudo pacman -Syu --needed --noconfirm \
         tela-circle-icon-theme-all tela-circle-icon-theme-black tela-circle-icon-theme-blue \
         tela-circle-icon-theme-brown tela-circle-icon-theme-dracula tela-circle-icon-theme-green \
@@ -273,14 +275,14 @@ Login feito, entao:
         tela-circle-icon-theme-red tela-circle-icon-theme-standard tela-circle-icon-theme-ubuntu \
         tela-circle-icon-theme-yellow
     
-    # Pacotes de Wallpapers e Sons de Sistema
+    # 4. Pacotes de Wallpapers e Sons de Sistema
     sudo pacman -Syu --needed --noconfirm \
         plasma-workspace-wallpapers elementary-wallpapers deepin-wallpapers \
         cosmic-wallpapers archlinux-wallpapers sound-theme-freedesktop \
         oxygen-sounds ocean-sound-theme sound-theme-elementary \
         deepin-sound-theme cosmic-sound-theme
     
-    # Tipografia, Fontes Monospaced, Sans-Serif e Nerd Fonts
+    # 5. Tipografia, Fontes Monospaced, Sans-Serif e Nerd Fonts
     sudo pacman -Syu --needed --noconfirm \
         noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
         opendesktop-fonts ttf-atkinson-hyperlegible otf-atkinson-hyperlegible \
@@ -289,16 +291,15 @@ Login feito, entao:
         ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono \
         ttf-roboto ttf-roboto-mono ttf-roboto-mono-nerd ttf-space-mono-nerd \
         ttf-ubuntu-font-family ttf-ubuntu-nerd ttf-victor-mono-nerd \
-        ttf-zed-mono-nerd ttf-dejavu ttf-liberation ttf-cascadia-code-nerd
+        ttf-zed-mono-nerd ttf-dejavu ttf-liberation ttf-cascadia-code \
+        ttf-cascadia-code-nerd ttf-hack ttf-hack-nerd cantarell-fonts
     
-    # DOCA
-    sudo pacman -Sy --noconfirm --needed plank
-
-    # DE
-    sudo pacman -Rns $(pacman -Qtdq)
-    sudo pacman -Sc
-
-    # Ambientes de Desktop Completos
+    # 6. Ferramentas e Utilitários de Customização e Display
+    sudo pacman -Syu --needed --noconfirm \
+        plank lxappearance qt5ct qt6ct dconf-editor feh nitrogen rofi picom \
+        grim slurp swaylock mako dunst
+    
+    # 7. Ambientes de Desktop Completos (DEs)
     sudo pacman -Syu --needed --noconfirm plasma-meta kde-applications
     sudo pacman -Syu --needed --noconfirm gnome gnome-extra
     sudo pacman -Syu --needed --noconfirm cinnamon nemo-fileroller
@@ -309,22 +310,25 @@ Login feito, entao:
     sudo pacman -Syu --needed --noconfirm budgie-desktop
     sudo pacman -Syu --needed --noconfirm deepin deepin-extra
     sudo pacman -Syu --needed --noconfirm enlightenment
+    sudo pacman -Syu --needed --noconfirm pantheon
+    sudo pacman -Syu --needed --noconfirm ukui ukui-media
+    sudo pacman -Syu --needed --noconfirm cosmic-desktop
     
-    # Wayland Composers e Tiling WMs Modernos
+    # 8. Wayland Compositors e Tiling WMs Modernos
     sudo pacman -Syu --needed --noconfirm sway swaybg waybar foot
     sudo pacman -Syu --needed --noconfirm hyprland waybar kitty
     sudo pacman -Syu --needed --noconfirm river
     sudo pacman -Syu --needed --noconfirm wayfire wf-shell wf-config
     sudo pacman -Syu --needed --noconfirm labwc
     
-    # X11 Tiling Window Managers
+    # 9. X11 Tiling Window Managers
     sudo pacman -Syu --needed --noconfirm i3-wm i3status dmenu
     sudo pacman -Syu --needed --noconfirm awesome
     sudo pacman -Syu --needed --noconfirm bspwm sxhkd
     sudo pacman -Syu --needed --noconfirm qtile
     sudo pacman -Syu --needed --noconfirm herbstluftwm
     
-    # X11 Floating e Minimalist Window Managers
+    # 10. X11 Floating e Minimalist Window Managers
     sudo pacman -Syu --needed --noconfirm openbox obconf tint2
     sudo pacman -Syu --needed --noconfirm fluxbox
     sudo pacman -Syu --needed --noconfirm icewm
@@ -332,10 +336,9 @@ Login feito, entao:
     sudo pacman -Syu --needed --noconfirm fvwm3
     sudo pacman -Syu --needed --noconfirm pekwm
     
-    # Outras Interfaces e Ecossistemas
-    sudo pacman -Syu --needed --noconfirm pantheon
-    sudo pacman -Syu --needed --noconfirm ukui ukui-media
-    sudo pacman -Syu --needed --noconfirm cosmic-desktop
+    # 11. Limpeza de Cache e Pacotes Órfãos
+    sudo pacman -Rns $(pacman -Qtdq) --noconfirm || true
+    sudo pacman -Sc --noconfirm
 
 
     # SYS INFO
