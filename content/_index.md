@@ -233,6 +233,12 @@ Login feito, entao:
     # MAVEN
     sudo pacman -Sy --noconfirm --needed maven
 
+    # JS
+    sudo pacman -Syu --noconfirm --needed nodejs npm nvm
+    
+    # PY
+    sudo pacman -Syu --needed --noconfirm python python-pip
+
     # LOGIN
     sudo systemctl enable sddm    # Pra KDE, LXQt, Cinnamon, Deepin, Budgie, i3, Sway
     #sudo systemctl enable gdm --now     # Pra GNOME
