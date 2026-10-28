@@ -153,7 +153,15 @@ Login feito, entao:
 
 9. Conecte no Wifi
 
-10. Instale ambiente grafico e demais dependencias
+```bash
+Verifique a interface de rede Wi-Fi: Execute o comando nmcli device wifi list para listar todas as interfaces de rede disponíveis.
+Conecte-se à rede Wi-Fi: Use o comando nmcli device wifi connect <SSID> password <senha> para se conectar à rede desejada.
+Atualize os certificados de conexao
+sudo pacman -Syu ca-certificates ca-certificates-utils openssl curl
+Entao baixe o script de configuracao
+```
+
+11. Instale ambiente grafico e demais dependencias
     Por exemplo, lxqt
     Baixe-o [aqui](https://drive.google.com/drive/folders/13tuAH1TGpU4rDZynqm2xRj9N3ifgbEEw?usp=sharing) depois rode no terminal com
     ```bash
