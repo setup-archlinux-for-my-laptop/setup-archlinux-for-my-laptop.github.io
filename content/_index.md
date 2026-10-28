@@ -132,7 +132,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```bash
 pacman -S --noconfirm sudo
 useradd -m -G wheel user
-passwd pass
+passwd user pass
 EDITOR=nano visudo  # descomenta a linha %wheel ALL=(ALL:ALL) ALL
 ```
 
@@ -157,7 +157,10 @@ Login feito, entao:
     Por exemplo, lxqt
     Baixe-o [aqui](https://drive.google.com/drive/folders/13tuAH1TGpU4rDZynqm2xRj9N3ifgbEEw?usp=sharing) depois rode no terminal com
     ```bash
-    sh setup-arch-with-lxqt-intel-raptor-lake-proc.sh
+curl -L https://raw.githubusercontent.com/setup-archlinux-for-my-laptop/setup-archlinux-for-my-laptop.github.io/refs/heads/main/static/scripts/setup-arch-with-lxqt-interactive.sh -o setup.sh
+chmod +x setup.sh
+./setup.sh
+    
     ```
 
     ```bash
